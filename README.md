@@ -48,11 +48,11 @@ The system attempts to answer the more important disaster-management question:
 
 | -------------------- | ------------------------------------------------------- |
 
-| 🌐 Live Prototype    | **[ADD DEPLOYED PROTOTYPE URL]**                        |
+| 🌐 Live Prototype    | https://karthikeyanravikumar-ds-ai-gis-fvwps-app-aomepe.streamlit.app/  |
 
 | 💻 GitHub Repository | https://github.com/karthikeyanravikumar-ds/AI-GIS-FVWPS |
 
-| 🎥 Demo Video        | **[ADD DEMO VIDEO URL]**                                |
+| 🎥 Demo Video        | https://youtu.be/fXOyZhNUklY                                |
 
 | 📄 Hackathon         | OOSC 4.0 — IIIT Allahabad                               |
 
@@ -1750,7 +1750,6 @@ Experiment with AI, GIS and spatial vulnerability modelling.
 
 ---
 
-
 # 🧪 Suggested Hackathon Demo Scenario
 
 For the final presentation, demonstrate the system as a real decision-making workflow:
@@ -1993,41 +1992,20 @@ What intervention should be prioritized?
 
 ---
 
-**# 👥 Team
+# 👥 Team
 
 Project: AI-GIS Flood Vulnerability & Public Welfare Prioritization System
 
 Team Members & Contributions
 
-Team Member
-
-Role / Contribution
-
-Karthikeyan Ravikumar
-
-GIS Mapping, Machine Learning, Vulnerability Analysis & Welfare Priority Scoring
-
-Angel
-
-Machine Learning, Vulnerability Analysis & Welfare Priority Scoring
-
-Kishore
-
-Streamlit Development, Dashboard Interface & User Experience
-
-Contribution Breakdown
-
-🗺️ GIS Mapping — Karthikeyan Ravikumar
+🗺️ GIS Mapping — Karthikeyan 
 Developed and integrated the GIS layers, spatial visualization, flood-zone mapping, river, hospital and road layers.
 
-🤖 Machine Learning & Scoring — Karthikeyan Ravikumar & Angel
+🤖 Machine Learning & Scoring — Karthikeyan & Angel
 Worked on vulnerability modelling, feature analysis, ML-based segmentation, welfare-priority scoring and interpretation.
 
 🖥️ Streamlit & Interface — Kishore
 Developed the Streamlit dashboard structure and user interface for interacting with the system and its analytical modules.
-
-Repository:
-https://github.com/karthikeyanravikumar-ds/AI-GIS-FVWPS
 
 ---
 
@@ -2061,7 +2039,7 @@ The project aims to demonstrate how open-source geospatial technologies, machine
 
 * **Live Prototype:** https://karthikeyanravikumar-ds-ai-gis-fvwps-app-aomepe.streamlit.app/
 
-* **Demo Video:** `[ADD LINK]`
+* **Demo Video:** https://youtu.be/fXOyZhNUklY
 
 * **OOSC 4.0:** https://oosc.iiita.ac.in/hackathon
 
