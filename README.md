@@ -1,1172 +1,793 @@
-# 🛡️ AI-GIS Flood Vulnerability & Public Welfare Prioritization System
+🛡️ AI-GIS-FVWPS
 
-### AI-GIS-FVWPS
+AI-GIS Flood Vulnerability & Public Welfare Prioritization System
 
-**AI-GIS Based Flood Vulnerability and Public Welfare Prioritization System for Underserved Communities**
+An AI + GIS decision-support prototype that identifies flood-vulnerable and underserved communities, ranks them by public-welfare priority, visualizes risk spatially, and generates practical response recommendations for disaster-management decision makers.
 
-> An AI + GIS decision-support prototype that identifies flood-vulnerable and underserved communities, ranks them by public-welfare priority, visualizes risk spatially, and generates practical response recommendations for disaster-management decision makers.
+<p align="center">
 
----
 
-## 🚀 OOSC 4.0 — Phase 1 Prototype Submission
 
-This project is developed as a functional prototype for the **OOSC 4.0 Hackathon at IIIT Allahabad**.
+
+
+
+
+
+</p>
+
+<p align="center">
+  <a href="https://karthikeyanravikumar-ds-ai-gis-fvwps-app-aomepe.streamlit.app/"><strong>🌐 Live Demo</strong></a> •
+  <a href="https://youtu.be/fXOyZhNUklY"><strong>🎥 Demo Video</strong></a> •
+  <a href="https://github.com/karthikeyanravikumar-ds/AI-GIS-FVWPS"><strong>💻 GitHub</strong></a>
+</p>
+
+🚀 OOSC 4.0 — Phase 1 Prototype
+
+AI-GIS-FVWPS is a functional prototype developed for the OOSC 4.0 Hackathon at IIIT Allahabad.
 
 The system combines:
 
-* 🗺️ Geographic Information Systems (GIS)
+🗺️ Geographic Information Systems (GIS)
 
-* 🤖 Machine Learning
+🤖 Machine Learning
 
-* 🧠 Generative AI
+🧠 Generative AI
 
-* 🌊 Flood exposure analysis
+🌊 Flood exposure analysis
 
-* 🏥 Essential-service accessibility analysis
+👥 Population exposure
 
-* 👥 Population exposure
+🏥 Essential-service accessibility
 
-* 💧 Water and drainage infrastructure gaps
+💧 Water infrastructure gaps
 
-* 🏘️ Underserved-community identification
+🚰 Drainage infrastructure gaps
 
-* 📊 Public welfare prioritization
+🏘️ Underserved-community identification
 
-* 🌐 Multilingual decision support
+📊 Public welfare prioritization
 
-The objective is not simply to show where flooding occurs.
+🌐 Multilingual decision support
 
-The system attempts to answer the more important disaster-management question:
+The Core Question
 
-> **"Which communities should receive attention first, why, and what essential services should be prioritized?"**
+Traditional flood mapping mainly asks:
 
----
+Where is the flood risk?
 
-# 🔗 Prototype & Submission Links
+AI-GIS-FVWPS goes one step further:
 
-| Resource             | Link                                                    |
+Where is the risk, who is most vulnerable, what services are missing, and where should intervention be prioritized?
 
-| -------------------- | ------------------------------------------------------- |
+This moves the workflow from:
 
-| 🌐 Live Prototype    | https://karthikeyanravikumar-ds-ai-gis-fvwps-app-aomepe.streamlit.app/  |
+Hazard Mapping → Vulnerability Assessment → Welfare Prioritization → Decision Support
 
-| 💻 GitHub Repository | https://github.com/karthikeyanravikumar-ds/AI-GIS-FVWPS |
+🔗 Prototype & Submission Links
 
-| 🎥 Demo Video        | https://youtu.be/fXOyZhNUklY                                |
+Resource
 
-| 📄 Hackathon         | OOSC 4.0 — IIIT Allahabad                               |
+Link
 
-### Local Prototype
+🌐 Live Prototype
 
-If the hosted prototype is unavailable, the application can be executed locally using the instructions provided below.
+Open Streamlit App
 
----
+💻 GitHub Repository
 
-# 🎯 Problem Statement
+AI-GIS-FVWPS
 
-Flood management systems often focus primarily on **hazard mapping** — identifying areas that are likely to experience flooding.
+🎥 Demo Video
 
-However, flood impact is not determined by flood exposure alone.
+Watch on YouTube
 
-Two villages can experience similar flood exposure while having very different levels of:
+🏆 Hackathon
 
-* population exposure,
+OOSC 4.0 — IIIT Allahabad
 
-* healthcare accessibility,
+🎯 Problem Statement
 
-* drinking-water availability,
+Flood management systems often focus on hazard mapping — identifying locations likely to experience flooding.
 
-* drainage infrastructure,
+However, flood impact is not determined by exposure alone.
 
-* road connectivity,
+Two communities may experience similar flood exposure while having very different levels of:
 
-* proximity to rivers,
+Population exposure
 
-* essential-service gaps,
+Healthcare accessibility
 
-* and overall socioeconomic vulnerability.
+Drinking-water availability
 
-This creates a critical decision-support problem:
+Drainage infrastructure
 
-> **How can disaster-management authorities identify which communities are most vulnerable and prioritize limited public resources accordingly?**
+Road connectivity
 
-AI-GIS-FVWPS addresses this problem by combining spatial data, engineered vulnerability indicators, machine learning, and AI-assisted recommendations into a unified decision-support dashboard.
+River proximity
 
----
+Essential-service availability
 
-# 💡 Proposed Solution
+Overall vulnerability
 
-AI-GIS-FVWPS converts village-level spatial and socioeconomic information into an integrated **Flood Vulnerability + Public Welfare Priority assessment**.
+This creates a practical decision-support problem:
 
-The system follows this pipeline:
+How can disaster-management authorities identify the most vulnerable communities and prioritize limited public resources accordingly?
 
-```text
+AI-GIS-FVWPS addresses this by combining spatial data, engineered vulnerability indicators, machine learning, welfare-priority scoring, and AI-assisted recommendations into one dashboard.
 
-Raw GIS / Village Data
+💡 Proposed Solution
 
-        │
+The system converts village-level spatial, demographic, infrastructure, and flood-related information into an integrated:
 
-        ▼
+Flood Vulnerability + Public Welfare Priority Assessment
 
+End-to-End Pipeline
+
+GIS / Village Data
+        ↓
 Data Cleaning & Validation
-
-        │
-
-        ▼
-
+        ↓
 Feature Engineering
-
-        │
-
-        ├── Flood Exposure
-
-        ├── Population Exposure
-
-        ├── Healthcare Gap
-
-        ├── Water Gap
-
-        ├── Drainage Gap
-
-        └── River Vulnerability
-
-        │
-
-        ▼
-
+        ├── Flood Exposure
+        ├── Population Exposure
+        ├── Healthcare Gap
+        ├── Water Gap
+        ├── Drainage Gap
+        └── River Vulnerability
+        ↓
 ML Vulnerability Segmentation
-
-        │
-
-        ▼
-
+        ↓
 Underserved Community Score
-
-        │
-
-        ▼
-
-Public Welfare Priority Score
-
-        │
-
-        ▼
-
+        ↓
+Welfare Priority Score
+        ↓
 Priority Classification & Ranking
-
-        │
-
-        ▼
-
-GIS Visualization
-
-        │
-
-        ▼
-
+        ↓
+Interactive GIS Visualization
+        ↓
 Generative AI Decision Support
-
-        │
-
-        ▼
-
+        ↓
 Recommended Welfare / Response Actions
 
-```
+⭐ Core Features
 
----
+1. 🗺️ Interactive GIS Command Center
 
-# 🧠 What Makes the Prototype Different?
+Built with Folium + Streamlit, the dashboard provides interactive spatial analysis.
 
-Traditional flood maps answer:
+GIS layers include
 
-> **Where is the flood risk?**
+District boundaries
 
-AI-GIS-FVWPS attempts to answer:
+Village boundaries
 
-> **Where is the risk, who is most vulnerable, what services are missing, and where should intervention be prioritized?**
+Flood inundation zones
 
-The system therefore moves from:
+River networks
 
-**Hazard Mapping → Vulnerability Assessment → Welfare Prioritization → Decision Support**
+Hospitals
 
-This makes the prototype more relevant to real-world disaster-management workflows.
+Roads
 
----
+Village priority levels
 
-# ⭐ Core Features
+Selected village locations
 
-## 1. 🗺️ Interactive GIS Command Center
+Basemap options
 
-The application provides an interactive geospatial dashboard built using **Folium + Streamlit**.
+CartoDB Positron
 
-Users can explore:
+OpenStreetMap
 
-* District boundaries
+Satellite imagery
 
-* Village boundaries
+Users can toggle layers, select villages, and zoom into the selected location.
 
-* Flood inundation zones
+2. 🌊 Flood Exposure Analysis
 
-* River networks
-
-* Hospitals
-
-* Roads
-
-* Village priority levels
-
-* Selected village locations
-
-The map supports multiple basemap options:
-
-* CartoDB Positron
-
-* OpenStreetMap
-
-* Satellite imagery
-
-Users can toggle GIS layers according to their analytical requirement.
-
-The selected village is automatically highlighted and the map can zoom into the selected location.
-
----
-
-# 2. 🌊 Flood Exposure Analysis
-
-Flood exposure is converted into a normalized vulnerability indicator.
-
-The system calculates:
-
-```text
+Flood exposure is converted into a normalized Flood Score (0–100).
 
 Flood Exposure
-
-        ↓
-
-Flood Score (0–100)
-
-```
+      ↓
+Flood Score
+   0 — 100
 
 A higher score represents greater flood exposure relative to the study dataset.
 
-This forms one of the primary components of the overall vulnerability and welfare-priority pipeline.
+3. 👥 Population Exposure
 
----
-
-# 3. 👥 Population Exposure
-
-Population information is transformed into a spatial exposure indicator.
-
-The system derives:
-
-```text
+Population exposure is derived from population density:
 
 Population Density
-
 =
-
 Total Population / Village Area
 
-```
+The resulting measure is normalized into a Population Exposure Score.
 
-The resulting population-density measure is normalized into a:
+Higher population exposure indicates potentially greater human impact during a flood event.
 
-```text
-
-Population Exposure Score
-
-```
-
-Higher population exposure increases the potential impact of a flood event.
-
----
-
-# 4. 🏥 Healthcare Accessibility Gap
+4. 🏥 Healthcare Accessibility Gap
 
 Healthcare accessibility is represented using distance to hospitals.
 
-The system derives:
-
-```text
-
 Hospital Distance
-
-        ↓
-
+        ↓
 Healthcare Gap Score
 
-```
+Greater distance from healthcare facilities increases the vulnerability contribution.
 
-Greater distance from healthcare facilities results in greater vulnerability.
+5. 💧 Drinking-Water Infrastructure Gap
 
-This enables the system to identify communities where flood exposure is combined with poor healthcare accessibility.
+The feature-engineering pipeline considers available water infrastructure such as:
 
----
+Tap water
 
-# 5. 💧 Drinking-Water Infrastructure Gap
+Hand pumps
 
-The feature-engineering pipeline considers available water infrastructure, including available fields such as:
+Tubewells
 
-* Tap water
+Wells
 
-* Hand pumps
-
-* Tubewells
-
-* Wells
-
-* Tanks / lakes
-
-The system derives:
-
-```text
+Tanks / lakes
 
 Water Availability
-
-        ↓
-
+        ↓
 Water Infrastructure Score
-
-        ↓
-
+        ↓
 Water Gap Score
 
-```
+Lower availability increases water-access vulnerability.
 
-Lower availability increases the water-access vulnerability.
+6. 🚰 Drainage Infrastructure Gap
 
----
+Drainage-related attributes include:
 
-# 6. 🚰 Drainage Infrastructure Gap
+Open drainage
 
-Drainage infrastructure is incorporated into the vulnerability assessment.
+Covered drainage
 
-The system considers drainage-related attributes such as:
+These are converted into a Drainage Gap Score to distinguish communities where flood exposure is combined with weaker drainage infrastructure.
 
-* Open drainage
+7. 🌊 River Proximity Vulnerability
 
-* Covered drainage
-
-The resulting availability measure is converted into a:
-
-```text
-
-Drainage Gap Score
-
-```
-
-This helps distinguish communities where flood exposure is accompanied by weaker drainage infrastructure.
-
----
-
-# 7. 🌊 River Proximity Vulnerability
-
-Distance from rivers is incorporated into the model.
-
-The system derives:
-
-```text
+Distance from rivers is incorporated into the assessment.
 
 River Distance
-
-        ↓
-
+      ↓
 River Vulnerability Score
 
-```
+Closer proximity produces greater river-related vulnerability.
 
-Closer proximity to rivers produces greater river-related vulnerability.
+🤖 Machine Learning Vulnerability Segmentation
 
-This provides an additional spatial factor beyond direct flood exposure.
+The project uses unsupervised K-Means clustering to identify groups of villages with similar vulnerability characteristics.
 
----
+ML Features
 
-# 8. 🤖 Machine Learning Vulnerability Segmentation
+Flood Score
+Population Score
+Healthcare Gap Score
+Water Gap Score
+Drainage Gap Score
+River Vulnerability Score
 
-The project includes an unsupervised machine-learning pipeline using **K-Means clustering**.
+Preprocessing
 
-The ML pipeline uses vulnerability-related features including:
+Convert relevant attributes to numeric form.
 
-```text
+Handle missing values using median imputation.
 
-• Flood Score
+Standardize features using StandardScaler.
 
-• Population Score
+Evaluate multiple K-Means configurations.
 
-• Healthcare Gap Score
-
-• Water Gap Score
-
-• Drainage Gap Score
-
-• River Vulnerability Score
-
-```
-
-Before clustering:
-
-1. Numerical conversion is performed.
-
-2. Missing values are handled using median imputation.
-
-3. Features are standardized using `StandardScaler`.
-
-4. Multiple K-Means configurations are evaluated.
-
-The implementation evaluates:
-
-```text
+Candidate values:
 
 K = 2
-
 K = 3
-
 K = 4
-
 K = 5
 
-```
+The configuration with the strongest silhouette score is selected.
 
-and selects the configuration with the best silhouette score.
+The ML component performs vulnerability segmentation; it does not claim to forecast future floods.
 
-This allows the system to discover groups of villages exhibiting similar vulnerability characteristics rather than relying only on manually assigned categories.
+🏘️ Underserved Community Identification
 
----
+A dedicated underserved-community score combines:
 
-# 9. 🏘️ Underserved Community Identification
+Factor
 
-A dedicated underserved-community score is calculated using:
+Weight
 
-```text
+Service Gap
 
-Service Gap        = 50%
+50%
 
-Population         = 30%
+Population Exposure
 
-Flood Exposure     = 20%
+30%
 
-```
+Flood Exposure
 
-Conceptually:
+20%
 
-```text
+Formula
 
 Underserved Score
-
 =
-
 0.50(Service Gap)
++ 0.30(Population Exposure)
++ 0.20(Flood Exposure)
 
-+
+The score is normalized to 0–100.
 
-0.30(Population Exposure)
+This helps identify communities where flood vulnerability is amplified by inadequate access to essential services.
 
-+
+🎯 Public Welfare Priority Score
 
-0.20(Flood Exposure)
+The central decision-support component is the Welfare Priority Score.
 
-```
+Factor
 
-The score is normalized to a `0–100` range.
+Weight
 
-This allows the system to identify communities where vulnerability is amplified by inadequate access to essential services.
+Flood Vulnerability
 
----
+40%
 
-# 10. 🎯 Public Welfare Priority Score
+Essential Service Gap
 
-The central decision-support component is the **Welfare Priority Score**.
+30%
 
-The current prototype combines:
+Population Exposure
 
-| Factor                | Weight |
+20%
 
-| --------------------- | -----: |
+Underserved Condition
 
-| Flood Vulnerability   |    40% |
+10%
 
-| Essential Service Gap |    30% |
-
-| Population Exposure   |    20% |
-
-| Underserved Condition |    10% |
-
-The resulting score is:
-
-```text
+Formula
 
 Welfare Priority Score
-
 =
-
 0.40(Flood Vulnerability)
++ 0.30(Service Gap)
++ 0.20(Population Exposure)
++ 0.10(Underserved Score)
 
-+
+Final score:
 
-0.30(Service Gap)
+0 — 100
 
-+
+The score is used to rank communities for welfare-oriented intervention.
 
-0.20(Population Exposure)
+🚨 Priority Classification
 
-+
+Score
 
-0.10(Underserved Score)
+Priority
 
-```
+75–100
 
-The final score is constrained to:
+🔴 Critical
 
-```text
+50–74.99
 
-0 – 100
+🟠 High
 
-```
+25–49.99
 
-This score becomes the basis for ranking communities for welfare-oriented intervention.
+🟡 Moderate
 
----
+0–24.99
 
-# 🚨 Priority Classification
+🟢 Low
 
-Villages are classified according to their welfare-priority score.
+The system also generates a priority rank, allowing users to identify the highest-priority communities within the study area.
 
-|    Score | Priority    |
+🏥💧🚰 Priority Service Identification
 
-| -------: | ----------- |
+The welfare pipeline identifies service areas that may require attention based on calculated service-gap indicators.
 
-|   75–100 | 🔴 Critical |
+Potential intervention areas include:
 
-| 50–74.99 | 🟠 High     |
+Healthcare
 
-| 25–49.99 | 🟡 Moderate |
+Drinking water
 
-|  0–24.99 | 🟢 Low      |
+Drainage
 
-The system also generates a **priority rank**, allowing authorities to identify the highest-priority communities across the study area.
+Emergency response
 
----
+Evacuation support
 
-# 🏥💧🚰 Priority Service Identification
+Food supplies
 
-The welfare pipeline identifies services that may require attention based on actual service-gap indicators.
+Road / connectivity
 
-Potential priority areas include:
-
-* Healthcare
-
-* Drinking water
-
-* Drainage
-
-* Emergency response
-
-* Evacuation support
-
-* Food supplies
-
-* Road/connectivity
-
-* Other public-welfare interventions
-
-This creates a bridge between:
-
-```text
+Other public-welfare interventions
 
 Risk Assessment
-
-        ↓
-
+      ↓
 Service Deficiency
-
-        ↓
-
+      ↓
 Actionable Priority
 
-```
+🧠 AI Copilot
 
----
+The prototype integrates a Generative AI decision-support layer using Google Gemini.
 
-# 🧠 AI Copilot
+Important Design Principle
 
-The prototype integrates a **Generative AI decision-support layer using Google Gemini**.
+Machine Learning calculates. GIS visualizes. Generative AI explains and recommends.
 
-The AI does **not** independently calculate the vulnerability score.
+The AI does not independently calculate the official vulnerability or welfare score.
 
 Instead:
 
-```text
-
 GIS + ML Pipeline
-
-        ↓
-
+       ↓
 Calculated Village Assessment
-
-        ↓
-
+       ↓
 Gemini AI
-
-        ↓
-
+       ↓
 Human-readable Decision Support
 
-```
+AI generates
 
-The AI receives the already-calculated village assessment and generates:
+Risk summary
 
-* Risk summary
+Priority reason
 
-* Priority reason
+Key risk factors
 
-* Key risk factors
+Priority services
 
-* Priority services
+Recommended actions
 
-* Recommended actions
+Urgency
 
-* Urgency
+Public-welfare message
 
-* Public welfare message
+Responsible AI constraints
 
-The implementation explicitly instructs the AI to:
+The AI is instructed to:
 
-* use only supplied village data,
+Use only supplied village data.
 
-* not invent statistics,
+Not invent statistics.
 
-* not modify calculated scores,
+Not modify calculated scores.
 
-* distinguish calculated factors from recommendations,
+Distinguish calculated factors from recommendations.
 
-* avoid claiming future flood prediction without prediction data,
+Avoid claiming future flood prediction without prediction data.
 
-* provide practical disaster-management recommendations.
+Provide practical disaster-management recommendations.
 
-This separation is intentional.
-
-### Principle
-
-> **Machine Learning calculates. GIS visualizes. Generative AI explains and recommends.**
-
----
-
-# 🌐 Multilingual Decision Support
+🌐 Multilingual Decision Support
 
 The dashboard supports:
 
-* 🇬🇧 English
+🇬🇧 English
 
-* 🇮🇳 Marathi
+🇮🇳 Marathi
 
-* 🇮🇳 Hindi
+🇮🇳 Hindi
 
 The language selector changes the dashboard interface and AI-generated assessment language.
 
-This is particularly important for public-sector and community-facing disaster-management applications where English-only interfaces can limit accessibility.
+This is intended to improve accessibility for public-sector and community-facing use cases.
 
----
+📊 Analytics Dashboard
 
-# 📊 Analytics Dashboard
+The analytics section explains why a community receives its priority.
 
-The analytics section provides a village-level assessment of:
+Risk Contribution
 
-### Risk Contribution
+Flood contribution
 
-* Flood contribution
+Population contribution
 
-* Population contribution
+Service-gap contribution
 
-* Service-gap contribution
+River vulnerability contribution
 
-* River vulnerability contribution
+Infrastructure Deficits
 
-### Infrastructure Deficits
+Healthcare gap
 
-* Healthcare gap
+Water gap
 
-* Water gap
+Drainage gap
 
-* Drainage gap
+📑 Dataset Ledger
 
-The dashboard converts these indicators into visual analytics so that decision makers can quickly understand **why a village has been prioritized**.
+The dashboard provides a structured village-level dataset view containing:
 
----
+Priority rank
 
-# 📑 Dataset Ledger
+Village
 
-The application includes a dataset-oriented view containing:
+District
 
-* Priority rank
+Welfare priority
 
-* Village
+Vulnerability score
 
-* District
+Flood exposure
 
-* Welfare priority
+Hospital distance
 
-* Vulnerability score
+Service-gap score
 
-* Flood exposure
+Filtered results can be exported as CSV for downstream analysis and reporting.
 
-* Hospital distance
+🏗️ System Architecture
 
-* Service-gap score
+                 ┌──────────────────────┐
+                 │ GIS / Village Data   │
+                 └──────────┬───────────┘
+                            ↓
+                 ┌──────────────────────┐
+                 │ Data Cleaning &      │
+                 │ Validation           │
+                 └──────────┬───────────┘
+                            ↓
+                 ┌──────────────────────┐
+                 │ Feature Engineering  │
+                 └──────────┬───────────┘
+                            ↓
+             ┌──────────────┼──────────────┐
+             ↓              ↓              ↓
+       Flood Score    Population Score   Service Gaps
+             └──────────────┼──────────────┘
+                            ↓
+                 ┌──────────────────────┐
+                 │ K-Means ML           │
+                 │ Vulnerability         │
+                 │ Segmentation          │
+                 └──────────┬───────────┘
+                            ↓
+                 ┌──────────────────────┐
+                 │ Underserved Score    │
+                 └──────────┬───────────┘
+                            ↓
+                 ┌──────────────────────┐
+                 │ Welfare Priority     │
+                 │ Score + Ranking      │
+                 └──────────┬───────────┘
+                            ↓
+              ┌─────────────┴─────────────┐
+              ↓                           ↓
+     ┌──────────────────┐       ┌──────────────────┐
+     │ Interactive GIS  │       │ Gemini AI Copilot │
+     │ Visualization    │       │ Recommendations  │
+     └────────┬─────────┘       └────────┬─────────┘
+              └─────────────┬─────────────┘
+                            ↓
+                 ┌────────────────────────┐
+                 │ Disaster Management    │
+                 │ Decision Support       │
+                 └────────────────────────┘
 
-The filtered dataset can also be exported as CSV.
+🔄 End-to-End Workflow
 
-This provides a simple mechanism for downstream analysis and reporting.
+Step
 
----
+Process
 
-# 🏗️ System Architecture
+1
 
-```text
+Data Collection
 
-                   ┌──────────────────────┐
+2
 
-                   │   GIS / Village Data │
+Data Cleaning
 
-                   └──────────┬───────────┘
+3
 
-                              │
+Feature Engineering
 
-                              ▼
+4
 
-                   ┌──────────────────────┐
+ML Vulnerability Segmentation
 
-                   │ Data Cleaning        │
+5
 
-                   │ & Validation         │
+Vulnerability Assessment
 
-                   └──────────┬───────────┘
+6
 
-                              │
+Welfare Prioritization
 
-                              ▼
+7
 
-                   ┌──────────────────────┐
+GIS Visualization
 
-                   │ Feature Engineering  │
+8
 
-                   └──────────┬───────────┘
+AI Decision Support
 
-                              │
+9
 
-             ┌────────────────┼────────────────┐
+Actionable Recommendations
 
-             │                │                │
-
-             ▼                ▼                ▼
-
-       Flood Score     Population Score   Service Gaps
-
-             │                │                │
-
-             └────────────────┼────────────────┘
-
-                              │
-
-                              ▼
-
-                   ┌──────────────────────┐
-
-                   │ K-Means ML           │
-
-                   │ Vulnerability        │
-
-                   │ Segmentation         │
-
-                   └──────────┬───────────┘
-
-                              │
-
-                              ▼
-
-                   ┌──────────────────────┐
-
-                   │ Underserved Score    │
-
-                   └──────────┬───────────┘
-
-                              │
-
-                              ▼
-
-                   ┌──────────────────────┐
-
-                   │ Welfare Priority     │
-
-                   │ Score + Ranking      │
-
-                   └──────────┬───────────┘
-
-                              │
-
-                ┌─────────────┴─────────────┐
-
-                ▼                           ▼
-
-      ┌──────────────────┐        ┌──────────────────┐
-
-      │ Interactive GIS  │        │ Gemini AI Copilot│
-
-      │ Visualization    │        │ Recommendations  │
-
-      └────────┬─────────┘        └────────┬─────────┘
-
-               │                           │
-
-               └─────────────┬─────────────┘
-
-                             ▼
-
-                 ┌────────────────────────┐
-
-                 │ Disaster Management    │
-
-                 │ Decision Support       │
-
-                 └────────────────────────┘
-
-```
-
----
-
-# 🔄 End-to-End Workflow
-
-### Step 1 — Data Collection
-
-The system receives village-level spatial, demographic, infrastructure and flood-related information.
-
-### Step 2 — Data Cleaning
-
-The preprocessing pipeline:
-
-* removes completely empty columns,
-
-* removes duplicate records,
-
-* standardizes missing-value representations,
-
-* converts relevant attributes to numeric form.
-
-### Step 3 — Feature Engineering
+Feature Engineering
 
 The system derives:
 
-* population density,
+Population density
 
-* water availability,
+Water availability
 
-* drainage availability,
+Drainage availability
 
-* flood score,
+Flood score
 
-* population score,
+Population score
 
-* healthcare gap,
+Healthcare gap
 
-* water gap,
+Water gap
 
-* drainage gap,
+Drainage gap
 
-* service gap,
+Service gap
 
-* river vulnerability.
+River vulnerability
 
-### Step 4 — ML Segmentation
+🧰 Technology Stack
 
-K-Means clustering groups villages based on their vulnerability characteristics.
+Layer
 
-### Step 5 — Vulnerability Assessment
+Technologies
 
-The system calculates vulnerability-related indicators and interprets the resulting clusters.
+Programming
 
-### Step 6 — Welfare Prioritization
+Python
 
-The system calculates:
+Data Processing
 
-* underserved score,
+Pandas, NumPy
 
-* welfare priority score,
+Machine Learning
 
-* priority level,
+Scikit-learn, K-Means, StandardScaler
 
-* priority rank,
+Model Evaluation
 
-* priority services.
+Silhouette Score
 
-### Step 7 — GIS Visualization
+GIS
 
-Results are displayed spatially through interactive GIS layers.
+Folium, GeoJSON, Streamlit-Folium
 
-### Step 8 — AI Decision Support
+Dashboard
 
-The selected village's calculated assessment is passed to the AI Copilot.
+Streamlit
 
-### Step 9 — Actionable Recommendations
+Visualization
 
-The AI produces a concise decision-support assessment and practical response recommendations.
+Plotly
 
----
+Generative AI
 
-# 🧰 Technology Stack
+Google Gemini API, google-genai
 
-## Programming
+Configuration
 
-* Python
+Python Dotenv
 
-## Data Processing
-
-* Pandas
-
-* NumPy
-
-## Machine Learning
-
-* Scikit-learn
-
-* K-Means Clustering
-
-* StandardScaler
-
-* Silhouette Score
-
-## GIS / Geospatial Visualization
-
-* Folium
-
-* GeoJSON
-
-* Streamlit-Folium
-
-## Dashboard
-
-* Streamlit
-
-## Data Visualization
-
-* Plotly
-
-## Generative AI
-
-* Google Gemini API
-
-* `google-genai`
-
-## Configuration
-
-* Python Dotenv
-
-The repository's current dependency file pins the main application stack, including Streamlit, Folium, Streamlit-Folium, Plotly/Altair ecosystem dependencies, NumPy, Pandas, Scikit-learn, and Google GenAI packages.
-
----
-
-# 📁 Repository Structure
-
-```text
+📁 Repository Structure
 
 AI-GIS-FVWPS/
-
 │
-
 ├── app.py
-
-│
-
 ├── requirements.txt
-
+├── .gitignore
 │
-
 ├── data/
-
-│   ├── external/
-
-│   │   ├── study_area_3districts.geojson
-
-│   │   ├── village_ai_final.geojson
-
-│   │   ├── village_flooded_area_district.geojson
-
-│   │   ├── river_network_in_district.geojson
-
-│   │   ├── hospitals_3districts.geojson
-
-│   │   └── road.geojson
-
-│   │
-
-│   ├── health.csv
-
-│   ├── village_ai_ml_final.csv
-
-│   └── village_ai_ml_health.csv
-
+│   ├── external/
+│   │   ├── study_area_3districts.geojson
+│   │   ├── village_ai_final.geojson
+│   │   ├── village_flooded_area_district.geojson
+│   │   ├── river_network_in_district.geojson
+│   │   ├── hospitals_3districts.geojson
+│   │   └── road.geojson
+│   │
+│   ├── health.csv
+│   ├── village_ai_ml_final.csv
+│   └── village_ai_ml_health.csv
 │
+└── src/
+    ├── __init__.py
+    ├── config.py
+    ├── data_loader.py
+    ├── feature_engineering.py
+    ├── gemini_ai.py
+    ├── i18n.py
+    ├── main.py
+    ├── merge_health.py
+    ├── vulnerability_model.py
+    └── welfare_priority.py
 
-├── src/
+⚙️ Installation
 
-│   ├── __init__.py
-
-│   ├── config.py
-
-│   ├── data_loader.py
-
-│   ├── feature_engineering.py
-
-│   ├── gemini_ai.py
-
-│   ├── i18n.py
-
-│   ├── main.py
-
-│   ├── merge_health.py
-
-│   ├── vulnerability_model.py
-
-│   └── welfare_priority.py
-
-│
-
-└── .gitignore
-
-```
-
-The current repository contains dedicated modules for configuration, data loading, feature engineering, Gemini integration, internationalization, vulnerability modelling, health-data merging and welfare prioritization.
-
----
-
-# ⚙️ Installation
-
-## 1. Clone the repository
-
-```bash
+1. Clone the repository
 
 git clone https://github.com/karthikeyanravikumar-ds/AI-GIS-FVWPS.git
-
 cd AI-GIS-FVWPS
 
-```
+2. Create a virtual environment
 
----
-
-## 2. Create a virtual environment
-
-### Windows
-
-```bash
+Windows
 
 python -m venv .venv
-
 .venv\Scripts\activate
 
-```
-
-### macOS / Linux
-
-```bash
+macOS / Linux
 
 python3 -m venv .venv
-
 source .venv/bin/activate
 
-```
-
----
-
-## 3. Install dependencies
-
-```bash
+3. Install dependencies
 
 pip install -r requirements.txt
 
-```
-
-The repository currently provides a pinned `requirements.txt`, including the required Streamlit, Folium, GIS visualization, machine-learning and Google GenAI dependencies.
-
----
-
-# 🔐 Gemini API Configuration
+🔐 Gemini API Configuration
 
 The AI Copilot requires a Gemini API key.
 
-Create a file named:
-
-```text
+Create:
 
 .env
-
-```
 
 in the project root.
 
 Add:
 
-```env
-
 GEMINI_API_KEY=YOUR_GEMINI_API_KEY
 
-```
+⚠️ Security
 
-### Important
+Never commit .env or expose your API key publicly.
 
-Do **not** commit your `.env` file or expose your API key publicly.
+Keep credentials in environment variables.
 
-The application explicitly loads the API key from the project `.env` file before initializing the Gemini client.
+Ensure .env is included in .gitignore.
 
----
+Never hard-code API keys.
 
-# ▶️ Run the Prototype
+Use proper secret management for production deployments.
+
+▶️ Run the Prototype
 
 Start the Streamlit application:
 
-```bash
-
 streamlit run app.py
 
-```
-
-The terminal will provide a local URL similar to:
-
-```text
+Open:
 
 http://localhost:8501
 
-```
-
-Open the URL in your browser.
-
----
-
-# 🖥️ Prototype Walkthrough
+🖥️ Prototype Walkthrough
 
 Once the dashboard opens:
 
-### 1. Select Language
+1. Select Language
 
-Choose:
+Choose English, Marathi, or Hindi.
 
-```text
-
-English
-
-Marathi
-
-Hindi
-
-```
-
-### 2. Select District
+2. Select District
 
 Use the district filter to narrow the study area.
 
-### 3. Select Priority
+3. Select Priority
 
-Filter villages by:
-
-```text
+Filter communities by:
 
 All
 
@@ -1176,17 +797,13 @@ Moderate
 
 Low
 
-```
-
-### 4. Select a Village
+4. Select a Village
 
 Choose a target village to inspect its assessment.
 
-### 5. Explore the GIS Map
+5. Explore the GIS Map
 
 Toggle:
-
-```text
 
 Flood Zones
 
@@ -1196,855 +813,605 @@ Hospitals
 
 Roads
 
-```
-
-### 6. Inspect Risk Indicators
+6. Inspect Risk Indicators
 
 Review:
 
-* Flood Exposure
+Flood Exposure
 
-* Vulnerability Index
+Vulnerability Index
 
-* Welfare Priority Score
+Welfare Priority Score
 
-* Hospital Distance
+Hospital Distance
 
-* Service Gap
+Service Gap
 
-### 7. Open Analytics
+7. Open Analytics
 
 Understand the contribution of:
 
-* flood exposure,
+Flood exposure
 
-* population,
+Population
 
-* service gaps,
+Service gaps
 
-* river vulnerability.
+River vulnerability
 
-### 8. Open AI Copilot
+8. Open AI Copilot
 
-Generate a village-specific AI assessment and recommended actions.
+Generate a village-specific assessment and recommended actions.
 
-### 9. Inspect Dataset Ledger
+9. Inspect Dataset Ledger
 
 Review and export the filtered village-level dataset.
 
----
-
-# 📌 Example Decision-Support Flow
-
-A decision maker selects a village.
-
-The system may reveal:
-
-```text
+📌 Example Decision-Support Flow
 
 Village
+   ↓
+High Flood Exposure
+   ↓
+High Population Exposure
+   ↓
+Large Hospital Distance
+   ↓
+Poor Water / Drainage Infrastructure
+   ↓
+High Service Gap
+   ↓
+High Welfare Priority
+   ↓
+Priority Services Identified
+   ↓
+AI-Generated Response Recommendations
 
-   ↓
+The goal is to convert multiple GIS and tabular indicators into one interpretable decision-support workflow.
 
-High flood exposure
+🔬 Technical Methodology
 
-   ↓
+Normalization
 
-High population exposure
-
-   ↓
-
-Large hospital distance
-
-   ↓
-
-Poor water / drainage infrastructure
-
-   ↓
-
-High service gap
-
-   ↓
-
-High welfare priority
-
-   ↓
-
-Priority services identified
-
-   ↓
-
-AI-generated response recommendations
-
-```
-
-The goal is to turn a complex collection of GIS and tabular indicators into a single interpretable decision-support workflow.
-
----
-
-# 🔬 Technical Methodology
-
-## Normalization
-
-Most vulnerability indicators are converted into a `0–100` scale using Min-Max normalization.
-
-Conceptually:
-
-```text
+Most vulnerability indicators are converted to a 0–100 scale using Min-Max normalization.
 
 Score =
-
 ((Value - Minimum) /
-
-(Maximum - Minimum)) × 100
-
-```
+ (Maximum - Minimum)) × 100
 
 Missing values are handled through median imputation where appropriate.
 
----
-
-## Machine Learning
-
-The ML pipeline uses:
-
-```text
+Machine Learning
 
 StandardScaler
-
-       ↓
-
+      ↓
 K-Means
-
-       ↓
-
-K = 2...5 evaluation
-
-       ↓
-
+      ↓
+K = 2...5 Evaluation
+      ↓
 Silhouette Score
-
-       ↓
-
+      ↓
 Best K
-
-       ↓
-
+      ↓
 Village Clusters
 
-```
+🎯 Welfare Prioritization Methodology
 
-The clustering implementation evaluates candidate cluster counts from 2 through 5 and selects the configuration with the strongest silhouette score.
+The model is intentionally interpretable.
 
----
+                 FLOOD
+                  40%
+                   │
+                   ▼
+SERVICE GAP 30% → PRIORITY ← POPULATION 20%
+                   ▲
+                   │
+              UNDERSERVED
+                  10%
 
-# 🎯 Welfare Prioritization Methodology
+The design allows decision makers to understand why a community receives a particular priority score rather than relying entirely on an opaque black-box prediction.
 
-The welfare-priority model is intentionally interpretable.
+🤖 Responsible AI Design
 
-```text
+Generative AI is used as a decision-support layer, not as the source of the underlying analytical calculation.
 
-                    FLOOD
+AI receives
 
-                     40%
+Village information
 
-                      │
+District
 
-                      ▼
+Calculated vulnerability indicators
 
-SERVICE GAP 30% ──► PRIORITY ◄── POPULATION 20%
+Welfare score
 
-                      ▲
+Service gaps
 
-                      │
+Priority services
 
-                 UNDERSERVED
+Other supplied assessment attributes
 
-                    10%
+AI produces
 
-```
+Risk summary
 
-This design makes it possible for a decision maker to understand **why** a community receives a particular priority score rather than relying on an opaque black-box prediction.
+Priority explanation
 
-The implemented scoring logic explicitly combines flood vulnerability, service gaps, population exposure and underserved conditions.
+Key risk factors
 
----
+Recommended actions
 
-# 🤖 Responsible AI Design
+Urgency
 
-The Generative AI component is designed as a **decision-support layer**, not as the source of the underlying risk calculation.
+Public-welfare message
 
-### AI receives:
+AI does not
 
-* Village information
+Independently calculate the official vulnerability score
 
-* District
+Modify the ML-derived priority score
 
-* Calculated vulnerability indicators
+Invent statistics
 
-* Welfare score
+Claim future flood prediction without prediction data
 
-* Service gaps
+Provide medical diagnosis
 
-* Priority services
+🌍 Scalability
 
-* Other supplied assessment attributes
+The architecture is based on reusable village-level features.
 
-### AI produces:
+One Village
+    ↓
+Multiple Villages
+    ↓
+Multiple Districts
+    ↓
+Entire State
+    ↓
+Multiple States
+    ↓
+National Disaster-Management Datasets
 
-* Risk summary
-
-* Priority explanation
-
-* Key risk factors
-
-* Recommended actions
-
-* Urgency
-
-* Public-welfare message
-
-### AI does NOT:
-
-* independently calculate the official vulnerability score,
-
-* modify the ML-derived priority score,
-
-* invent statistics,
-
-* claim future flood prediction without prediction data,
-
-* provide medical diagnosis.
-
-This separation reduces the risk of presenting generated text as if it were the underlying analytical calculation. The repository's Gemini system prompt explicitly enforces these constraints.
-
----
-
-# 🌍 Scalability
-
-Although the current prototype focuses on a defined study region, the architecture is designed around reusable village-level features.
-
-The same pipeline can theoretically be extended to:
-
-```text
-
-One village
-
-      ↓
-
-Multiple villages
-
-      ↓
-
-Multiple districts
-
-      ↓
-
-Entire state
-
-      ↓
-
-Multiple states
-
-      ↓
-
-National disaster-management datasets
-
-```
-
-The key scalability mechanism is the separation between:
-
-```text
+The modular separation of:
 
 Data
-
- ↓
-
+ ↓
 Feature Engineering
-
- ↓
-
+ ↓
 ML
-
- ↓
-
+ ↓
 Prioritization
-
- ↓
-
+ ↓
 Visualization
-
- ↓
-
+ ↓
 AI Explanation
 
-```
+makes individual components easier to upgrade without redesigning the complete application.
 
-This makes individual components easier to replace or upgrade without redesigning the entire application.
+📈 Future Scope
 
----
+🌧️ Real-Time Flood Monitoring
 
-# 📈 Future Scalability
+Potential integrations:
 
-Potential future extensions include:
+Rainfall data
 
-### Real-Time Flood Monitoring
+River-level sensors
 
-Integration with:
+Weather APIs
 
-* rainfall data,
+Satellite imagery
 
-* river-level sensors,
+Near-real-time flood observations
 
-* weather APIs,
-
-* satellite imagery,
-
-* near-real-time flood observations.
-
-### Predictive Flood Modelling
+🔮 Predictive Flood Modelling
 
 Future versions could incorporate:
 
-* rainfall forecasting,
+Rainfall forecasting
 
-* river-level prediction,
+River-level prediction
 
-* temporal flood modelling,
+Temporal flood modelling
 
-* time-series ML,
+Time-series ML
 
-* remote-sensing based inundation prediction.
+Remote-sensing-based inundation prediction
 
-### Larger Geographic Coverage
+🗺️ Larger Geographic Coverage
 
-The system can be expanded from the current prototype study area to:
+Potential expansion:
 
-* additional districts,
+Additional districts
 
-* entire Maharashtra,
+Entire Maharashtra
 
-* other Indian states,
+Other Indian states
 
-* national-scale disaster-management applications.
+National-scale disaster-management applications
 
-### Resource Allocation Optimization
+🚑 Resource Allocation Optimization
 
-Future versions could recommend:
+Future versions could support:
 
-* evacuation-centre placement,
+Evacuation-centre placement
 
-* ambulance allocation,
+Ambulance allocation
 
-* relief-material distribution,
+Relief-material distribution
 
-* emergency-team deployment,
+Emergency-team deployment
 
-* temporary healthcare facilities.
+Temporary healthcare facilities
 
-### Mobile / Field Application
+📱 Mobile / Field Application
 
-A field application could allow officials or volunteers to:
+Officials or volunteers could:
 
-* report local flooding,
+Report local flooding
 
-* upload photographs,
+Upload photographs
 
-* update infrastructure conditions,
+Update infrastructure conditions
 
-* report blocked roads,
+Report blocked roads
 
-* report service outages.
+Report service outages
 
----
+🧪 Prototype Scope & Limitations
 
-# 🧪 Prototype Scope & Limitations
+This project is a hackathon prototype and decision-support system, not a certified disaster-management platform.
 
-This is a **hackathon prototype and decision-support system**, not a certified disaster-management platform.
+Current limitations:
 
-Important limitations include:
+The prototype uses prepared datasets rather than a complete real-time disaster-data infrastructure.
 
-1. The current system uses prepared datasets rather than a complete real-time disaster-data infrastructure.
+The ML component performs vulnerability segmentation rather than future flood forecasting.
 
-2. The current ML component performs vulnerability segmentation rather than future flood forecasting.
+Welfare scores depend on the quality and coverage of supplied datasets.
 
-3. Welfare scores depend on the quality and coverage of the supplied datasets.
+GIS accuracy depends on the underlying spatial datasets.
 
-4. GIS accuracy depends on the underlying spatial datasets.
+AI-generated recommendations should be reviewed by qualified authorities before operational use.
 
-5. AI-generated recommendations should be reviewed by qualified authorities before operational use.
+The prototype should not be interpreted as an official government risk classification.
 
-6. The prototype should not be interpreted as an official government risk classification.
+These limitations define the boundary between the current prototype and a production disaster-management system.
 
-These limitations are intentional and define the boundary between the current prototype and a production disaster-management system.
+🔐 Security Considerations
 
----
+Store API credentials in .env.
 
-# 🔐 Security Considerations
+Keep .env excluded from Git.
 
-* API credentials must be stored in `.env`.
+Never hard-code API keys.
 
-* `.env` should remain excluded from Git.
+Do not publicly commit sensitive operational datasets.
 
-* No API keys should be hard-coded into source files.
+Use secret-management services for production.
 
-* Sensitive operational datasets should not be publicly committed.
+Keep AI-generated recommendations subject to human review.
 
-* Production deployments should use secret-management services.
+🧩 Design Principles
 
-* AI-generated recommendations should remain subject to human review.
-
----
-
-# 🧩 Design Principles
-
-The project follows five main principles:
-
-### 1. Explainability
+1. Explainability
 
 Priority scores should be understandable.
 
-### 2. Spatial Context
+2. Spatial Context
 
 Risk should be interpreted geographically.
 
-### 3. Human-Centered AI
+3. Human-Centered AI
 
 AI should assist decision makers rather than replace them.
 
-### 4. Welfare-Oriented Prioritization
+4. Welfare-Oriented Prioritization
 
 The system focuses on people and essential services, not only physical flood exposure.
 
-### 5. Modular Architecture
+5. Modular Architecture
 
-Data, ML, GIS, prioritization and AI components remain logically separated.
+Data, ML, GIS, prioritization, and AI components remain logically separated.
 
----
+🏆 Innovation
 
-# 🏆 Innovation
-
-The primary innovation of AI-GIS-FVWPS is the integration of multiple decision layers into one workflow:
-
-```text
+The primary innovation is the integration of multiple decision layers into a single workflow:
 
 Flood Hazard
-
-     +
-
+     +
 Population Exposure
-
-     +
-
+     +
 Essential Services
-
-     +
-
+     +
 Infrastructure Gaps
-
-     +
-
+     +
 River Proximity
-
-     +
-
+     +
 ML Vulnerability Segmentation
-
-     +
-
+     +
 Underserved Communities
-
-     +
-
+     +
 Public Welfare Prioritization
-
-     +
-
+     +
 Generative AI
-
-     =
-
+     =
 AI-GIS Disaster Decision Support
 
-```
+Instead of producing another static flood-risk map, the prototype aims to create a:
 
-Instead of producing another static flood-risk map, the prototype attempts to create a **prioritization engine for people-centric disaster response**.
+People-centric prioritization engine for disaster response.
 
----
+🌐 Real-World Impact
 
-# 🌐 Real-World Impact
+Emergency resources are limited, while vulnerable communities can be numerous.
 
-The system is designed around a practical disaster-management scenario:
-
-> Emergency resources are limited, but the number of vulnerable communities can be large.
-
-The system can help decision makers move from:
-
-```text
+AI-GIS-FVWPS is designed to help decision makers move from:
 
 "These areas are flooded."
 
-```
-
 to:
 
-```text
-
 "These communities are most vulnerable,
-
 these are the contributing factors,
-
 these essential services are deficient,
-
 and these communities should be considered
-
 for priority intervention."
 
-```
+Potential stakeholders
 
-Potential stakeholders include:
+District disaster-management authorities
 
-* District disaster-management authorities
+Local government bodies
 
-* Local government bodies
+Emergency response teams
 
-* Emergency response teams
+Public-health departments
 
-* Public-health departments
+NGOs
 
-* NGOs
+Relief organizations
 
-* Relief organizations
+Infrastructure planners
 
-* Infrastructure planners
+Community welfare organizations
 
-* Community welfare organizations
+🧭 Intended Users
 
----
+User
 
-# 🧭 Intended Users
+Potential Use
 
-### Government / Disaster Management
+🏛️ Government / Disaster Management
 
-Identify and rank communities requiring attention.
+Identify and rank communities requiring attention
 
-### Emergency Response Teams
+🚨 Emergency Response Teams
 
-Understand spatial concentration of vulnerable communities.
+Understand spatial concentration of vulnerable communities
 
-### Public Health Authorities
+🏥 Public Health Authorities
 
-Identify locations with healthcare-access gaps.
+Identify healthcare-access gaps
 
-### NGOs & Relief Organizations
+🤝 NGOs & Relief Organizations
 
-Prioritize welfare interventions.
+Prioritize welfare interventions
 
-### Urban / Rural Planners
+🏗️ Urban / Rural Planners
 
-Identify infrastructure deficits associated with vulnerability.
+Identify infrastructure deficits
 
-### Researchers
+🔬 Researchers
 
-Experiment with AI, GIS and spatial vulnerability modelling.
+Experiment with AI, GIS and spatial vulnerability modelling
 
----
+🧪 Suggested Hackathon Demo
 
-# 🧪 Suggested Hackathon Demo Scenario
-
-For the final presentation, demonstrate the system as a real decision-making workflow:
-
-### Scenario
+Scenario
 
 A disaster-management officer wants to identify communities requiring priority welfare intervention.
 
-### Demonstration
+Demonstration Flow
 
-```text
-
-1. Open dashboard
-
-        ↓
-
-2. Select district
-
-        ↓
-
-3. Observe flood zones
-
-        ↓
-
-4. Select a village
-
-        ↓
-
-5. Review vulnerability score
-
-        ↓
-
-6. Review flood exposure
-
-        ↓
-
-7. Review hospital distance
-
-        ↓
-
-8. Review service gaps
-
-        ↓
-
-9. Review welfare priority
-
-        ↓
-
+1. Open Dashboard
+        ↓
+2. Select District
+        ↓
+3. Observe Flood Zones
+        ↓
+4. Select Village
+        ↓
+5. Review Vulnerability Score
+        ↓
+6. Review Flood Exposure
+        ↓
+7. Review Hospital Distance
+        ↓
+8. Review Service Gaps
+        ↓
+9. Review Welfare Priority
+        ↓
 10. Open AI Copilot
+        ↓
+11. Generate Recommendations
+        ↓
+12. Switch Language
+        ↓
+13. Export Dataset
 
-        ↓
+This demonstrates the complete value chain rather than only showing the map.
 
-11. Generate recommendations
+🛠️ Troubleshooting
 
-        ↓
+Streamlit command not found
 
-12. Switch language
-
-        ↓
-
-13. Export dataset
-
-```
-
-This demonstrates the entire value chain rather than only showing the map.
-
----
-
-# 🛠️ Troubleshooting
-
-## Streamlit command not found
-
-Make sure the virtual environment is activated:
-
-```bash
+Activate the virtual environment:
 
 .venv\Scripts\activate
 
-```
-
-Then reinstall:
-
-```bash
+Then reinstall dependencies:
 
 pip install -r requirements.txt
 
-```
+Gemini API Error
 
----
-
-## Gemini API error
-
-Check that:
-
-```text
-
-.env
-
-```
-
-exists in the project root and contains:
-
-```env
+Verify that .env exists in the project root:
 
 GEMINI_API_KEY=YOUR_GEMINI_API_KEY
 
-```
+Dataset Loading Error
 
-Do not include quotation marks unless required by your environment.
-
----
-
-## Dataset loading error
-
-Verify that the expected project directories exist:
-
-```text
+Verify the expected directories exist:
 
 data/
-
 data/external/
-
 outputs/
 
-```
+The dashboard expects processed datasets and GIS layers at the paths configured by the application.
 
-The dashboard expects its processed village dataset and GIS layers at the paths configured in `app.py`.
+GIS Layers Not Appearing
 
----
-
-## GIS layers not appearing
-
-Verify that the required GeoJSON files exist under:
-
-```text
-
-data/external/
-
-```
-
-Expected layers include:
-
-```text
+Verify that the following files exist under data/external/:
 
 study_area_3districts.geojson
-
 village_ai_final.geojson
-
 village_flooded_area_district.geojson
-
 river_network_in_district.geojson
-
 hospitals_3districts.geojson
-
 road.geojson
 
-```
+📚 Data & Methodology Transparency
 
----
+The repository contains both tabular and geospatial assets used by the prototype.
 
-# 📚 Data & Methodology Transparency
+The preprocessing pipeline:
 
-The repository contains both tabular and geospatial data assets used by the prototype.
+Cleans duplicate records
 
-The data directory currently contains health-related data, village ML datasets and external GIS layers.
+Removes empty columns
 
-The preprocessing pipeline cleans duplicate and empty records and standardizes common missing-value representations before feature engineering.
+Standardizes missing-value representations
 
-The feature-engineering pipeline derives population, water, drainage, healthcare, flood and river-related indicators before generating vulnerability scores.
+Converts relevant attributes to numeric form
 
----
+The feature-engineering pipeline derives:
 
-# 🔭 Future Vision
+Population indicators
+
+Water indicators
+
+Drainage indicators
+
+Healthcare indicators
+
+Flood indicators
+
+River-related indicators
+
+These are then used within the vulnerability and welfare-prioritization pipeline.
+
+🔭 Future Vision
 
 AI-GIS-FVWPS is intended as a foundation for a broader:
 
-> **People-Centric AI Disaster Management Platform**
+People-Centric AI Disaster Management Platform
 
-A mature production version could evolve into a continuously updated system combining:
-
-```text
+A mature production system could continuously combine:
 
 Satellite Data
-
-      +
-
+      +
 Rainfall
-
-      +
-
+      +
 River Sensors
-
-      +
-
+      +
 Weather Forecasts
-
-      +
-
+      +
 GIS
-
-      +
-
+      +
 Population Data
-
-      +
-
+      +
 Healthcare
-
-      +
-
+      +
 Infrastructure
-
-      +
-
+      +
 Machine Learning
-
-      +
-
+      +
 Generative AI
-
-      ↓
-
+      ↓
 Real-Time Disaster Decision Support
-
-```
 
 The long-term objective is to help authorities answer three questions:
 
-### WHERE?
+WHERE?
 
 Where is the hazard and vulnerability concentrated?
 
-### WHO?
+WHO?
 
 Which communities are most exposed and underserved?
 
-### WHAT NEXT?
+WHAT NEXT?
 
 What intervention should be prioritized?
 
----
+👥 Team
 
-# 👥 Team
+AI-GIS-FVWPS — Team Contributions
 
-Project: AI-GIS Flood Vulnerability & Public Welfare Prioritization System
+Team Member
 
-Team Members & Contributions
+Role
 
-🗺️ GIS Mapping — Karthikeyan 
-Developed and integrated the GIS layers, spatial visualization, flood-zone mapping, river, hospital and road layers.
+Contribution
 
-🤖 Machine Learning & Scoring — Karthikeyan & Angel
-Worked on vulnerability modelling, feature analysis, ML-based segmentation, welfare-priority scoring and interpretation.
+Karthikeyan
 
-🖥️ Streamlit & Interface — Kishore
-Developed the Streamlit dashboard structure and user interface for interacting with the system and its analytical modules.
+🗺️ GIS Mapping
 
----
+GIS layers, spatial visualization, flood-zone mapping, river, hospital and road layers
 
-# 📜 License
+Karthikeyan & Angel
 
-Add the project's chosen open-source license before final submission.
+🤖 ML & Scoring
 
-Recommended for an open-source hackathon project:
+Vulnerability modelling, feature analysis, ML segmentation, welfare-priority scoring and interpretation
 
-```text
+Kishore
 
-MIT License
+🖥️ Streamlit & Interface
 
-```
+Streamlit dashboard structure and user interface for interacting with analytical modules
 
-If an MIT license is selected, add a `LICENSE` file containing the official MIT License text.
+📜 License
 
----
+The project is intended as an open-source hackathon prototype.
 
-# ⭐ Acknowledgement
+Recommended license: MIT License
 
-Built as an open-source AI + GIS prototype for **OOSC 4.0 — Opportunity Open Source Conference, IIIT Allahabad**.
+If MIT is selected, add a LICENSE file containing the official MIT License text before final submission.
 
-The project aims to demonstrate how open-source geospatial technologies, machine learning and generative AI can be combined to create practical, explainable and people-centric disaster-management decision-support systems.
+⭐ Acknowledgement
 
----
+Built as an open-source AI + GIS prototype for OOSC 4.0 — Opportunity Open Source Conference, IIIT Allahabad.
 
-# 🔗 Project Links
+The project demonstrates how open-source geospatial technologies, machine learning, and generative AI can be combined to create practical, explainable, and people-centric disaster-management decision-support systems.
 
-* **GitHub:** https://github.com/karthikeyanravikumar-ds/AI-GIS-FVWPS
+🔗 Project Links
 
-* **Live Prototype:** https://karthikeyanravikumar-ds-ai-gis-fvwps-app-aomepe.streamlit.app/
+🌐 Live Prototype: https://karthikeyanravikumar-ds-ai-gis-fvwps-app-aomepe.streamlit.app/
 
-* **Demo Video:** https://youtu.be/fXOyZhNUklY
+💻 GitHub: https://github.com/karthikeyanravikumar-ds/AI-GIS-FVWPS
 
-* **OOSC 4.0:** https://oosc.iiita.ac.in/hackathon
+🎥 Demo Video: https://youtu.be/fXOyZhNUklY
 
----
+🏆 OOSC 4.0: https://oosc.iiita.ac.in/hackathon
 
-## 💬 One-Line Project Pitch
+💬 One-Line Project Pitch
 
-> **AI-GIS-FVWPS transforms flood maps into actionable welfare priorities by combining geospatial risk, population exposure, essential-service gaps, machine learning and generative AI to identify which underserved communities need attention first.**
+AI-GIS-FVWPS transforms flood maps into actionable welfare priorities by combining geospatial risk, population exposure, essential-service gaps, machine learning, and generative AI to identify which underserved communities need attention first.
+
+<p align="center">
+  <strong>🌊 From Flood Mapping → to Vulnerability → to Priority → to Action.</strong>
+</p>
