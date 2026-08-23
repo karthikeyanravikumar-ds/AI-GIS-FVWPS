@@ -5,9 +5,17 @@ from pathlib import Path
 import folium
 from folium.plugins import Fullscreen
 import pandas as pd
-import plotly.graph_objects as go
 import streamlit as st
-from streamlit_folium import st_folium
+
+try:
+    from plotly import graph_objects as go
+except ImportError:  # pragma: no cover - handled gracefully when dependency is unavailable
+    go = None
+
+try:
+    from streamlit_folium import st_folium
+except ImportError:  # pragma: no cover - handled gracefully when dependency is unavailable
+    st_folium = None
 
 from src.i18n import TRANSLATIONS
 from src.gemini_ai import generate_village_assessment

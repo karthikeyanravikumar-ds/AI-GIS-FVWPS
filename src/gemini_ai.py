@@ -1,94 +1,26 @@
 import os
-
-import json
-
 from pathlib import Path
-
-
-
 from dotenv import load_dotenv
-
+import streamlit as st
 from google import genai
 
-
-
-
-
-# =========================================================
-
-# LOAD .ENV FROM PROJECT ROOT
-
-# =========================================================
-
-
-
+# Load .env locally if present
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-
-
-
 ENV_FILE = PROJECT_ROOT / ".env"
+if ENV_FILE.exists():
+    load_dotenv(dotenv_path=ENV_FILE, override=True)
 
-
-
-print(f"Looking for .env at:")
-
-print(ENV_FILE)
-
-
-
-if not ENV_FILE.exists():
-
-    raise RuntimeError(
-
-        f".env file not found at: {ENV_FILE}"
-
-    )
-
-
-
-load_dotenv(
-
-    dotenv_path=ENV_FILE,
-
-    override=True
-
-)
-
-
-
-API_KEY = os.getenv(
-
-    "GEMINI_API_KEY"
-
-)
-
-
+# Try Streamlit Secrets first (for Cloud), then fallback to environment variable (for Local)
+API_KEY = None
+if hasattr(st, "secrets") and "GEMINI_API_KEY" in st.secrets:
+    API_KEY = st.secrets["GEMINI_API_KEY"]
+else:
+    API_KEY = os.getenv("GEMINI_API_KEY")
 
 if not API_KEY:
+    raise RuntimeError("GEMINI_API_KEY is not configured in .env or Streamlit Secrets.")
 
-
-
-    raise RuntimeError(
-
-        "GEMINI_API_KEY is missing from .env"
-
-    )
-
-
-
-print("Gemini API key detected.")
-
-
-
-client = genai.Client(
-
-    api_key=API_KEY
-
-)
-
-
-
-
+client = genai.Client(api_key=API_KEY)
 
 # =========================================================
 
