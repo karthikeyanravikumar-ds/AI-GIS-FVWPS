@@ -44,17 +44,17 @@ The system attempts to answer the more important disaster-management question:
 
 # 🔗 Prototype & Submission Links
 
-| Resource             | Link                                                    |
+| Resource             | Link                                                                     |
 
-| -------------------- | ------------------------------------------------------- |
+| -------------------- | ------------------------------------------------------------------------ |
 
 | 🌐 Live Prototype    | https://karthikeyanravikumar-ds-ai-gis-fvwps-app-aomepe.streamlit.app/  |
 
-| 💻 GitHub Repository | https://github.com/karthikeyanravikumar-ds/AI-GIS-FVWPS |
+| 💻 GitHub Repository | https://github.com/karthikeyanravikumar-ds/AI-GIS-FVWPS                 |
 
-| 🎥 Demo Video        | https://youtu.be/fXOyZhNUklY                            |
+| 🎥 Demo Video        | https://youtu.be/fXOyZhNUklY                                            |
 
-| 📄 Hackathon         | OOSC 4.0 — IIIT Allahabad                               |
+| 📄 Hackathon         | OOSC 4.0 — IIIT Allahabad                                               |
 
 ### Local Prototype
 
